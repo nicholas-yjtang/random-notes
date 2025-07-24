@@ -35,6 +35,7 @@
     127.0.0.1 youtube.com
 	127.0.0.1 music.youtube.com
 	127.0.0.1 www.youtubekids.com
+	127.0.0.1 m.youtube.com
     
 ![Pasted image 20250725040223.png](attachments/Pasted%20image%2020250725040223.png)
 
