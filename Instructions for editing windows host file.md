@@ -29,10 +29,12 @@
 
 ![Pasted image 20250725040150.png](attachments/Pasted%20image%2020250725040150.png)
 
-9. Add the following entries
+9. Add the following entries (and as many other variants as required)
     
-    127.0.0.1 [www.youtube.com](http://www.youtube.com/)  
+    127.0.0.1 www.youtube.com
     127.0.0.1 youtube.com
+	127.0.0.1 music.youtube.com
+	127.0.0.1 www.youtubekids.com
     
 ![Pasted image 20250725040223.png](attachments/Pasted%20image%2020250725040223.png)
 
