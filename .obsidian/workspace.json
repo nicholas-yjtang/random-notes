@@ -160,6 +160,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -170,6 +171,17 @@
   },
   "active": "75f7b340d73e27a5",
   "lastOpenFiles": [
+    "attachments/Pasted image 20250725040503.png",
+    "attachments/Pasted image 20250725040347.png",
+    "attachments/Pasted image 20250725040300.png",
+    "attachments/Pasted image 20250725040223.png",
+    "attachments/Pasted image 20250725040150.png",
+    "attachments/Pasted image 20250725040043.png",
+    "attachments/Pasted image 20250725040010.png",
+    "attachments/Pasted image 20250725035852.png",
+    "attachments/Pasted image 20250725035747.png",
+    "attachments/Pasted image 20250725035715.png",
+    "attachments/Pasted image 20250725035542.png",
     "Welcome.md",
     "Instructions for editing windows host file.md",
     "attachments"
