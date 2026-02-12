@@ -36,9 +36,9 @@ Just before the end, i get a message that says no headphones allowed. Another oo
 
 We're galloping off into the ~~new year~~ environment. 
 
-Looked at the email. Start the vpn with this vpn package there is customized just for me? I feel touched
+Looked at the email. Start the vpn with this vpn package that was customized just for me? I feel touched
 
-Where was this exam control panel I'm supposed to go to? Cpanel? What an imaginative subfolder name for a site hosting control panel. 
+Where was this exam control panel I'm supposed to go to? Cpanel? What an imaginative subfolder name for a site hosting control panel. Wonder if I get extra marks for enumerating this site.
 
 Once I opened it up, I can hear my laptop fan running at full speed. So noisy, I wish I had my headphones
 
