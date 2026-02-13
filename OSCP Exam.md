@@ -200,7 +200,7 @@ And of course once you let the thief in, expect them to loot you of everything. 
 
 Too bad I lack empathy. I don't feel bad at all. Time to go celebrate again. I can see daylight peaking into the room
 
-# 0700 - 0830 - Ippo
+# 0700 - 0800 - Ippo
 
 Oops. Think I might have celebrated prematurely. I have to look through my notes and make sure I have all the steps. 
 
@@ -208,7 +208,7 @@ Pretty sure I wasn't very detailed in my steps.
 
 Looks like I need to go through them step by step again
 
-# 0830 - 0900 - Back to the future
+# 0800 - 0900 - Back to the future
 
 Unsatisfied with the privesc of the intermediate box. 
 
