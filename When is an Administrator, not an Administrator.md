@@ -123,7 +123,9 @@ Elevate our permissions via UAC and run as Administrator
 
 ![Pasted%20image%2020260301022916.png](attachments/Pasted%20image%2020260301022916.png)
 
-And of course attempt to run mimikatz but since we don't have the correct permissions, it would fail
+And of course attempt to run mimikatz
+
+Since we don't have the correct permissions, it would fail
 
 ![Pasted%20image%2020260301025919.png](attachments/Pasted%20image%2020260301025919.png)
 
