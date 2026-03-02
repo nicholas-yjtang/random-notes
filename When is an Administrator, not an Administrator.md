@@ -1,10 +1,12 @@
 Someone posed this question in a discussion
 
+*I'm an Administrator, but can't do admin tasks*
+
 They were convinced that they were an Administrator but could not run an application that requires Administrative rights (specifically mimikatz.exe)
 
-There are multitudes of possible ways to lock down a specific user who has Administrative rights, but since this is asked in context of pentesting environments (HTB, Proving Grounds Practice, etc), I personally think it would be much easier to view the question this way
+There are multitudes of possible ways to lock down a specific user who has Administrative rights, but since this is asked in context of pentesting CTF environments (HTB, Proving Grounds: Practice, etc), I personally think it would be much easier to view the question this way
 
-What security misconfiguration would lead to this strange scenario of having a user that seems to have quasi administrative rights?
+*What security misconfiguration would lead to this strange scenario of having a user that seems to have quasi administrative rights?*
 
 For those who don't care for my meandering thoughts, you can just head to the [summary](#summary)  for the conclusion
 ## mimikatz
@@ -65,6 +67,10 @@ So looks like we have the **Administrator Command Prompt**, but we aren't actual
 
 Let's confirm that we are indeed not a local *Administrator*
 
+```
+net localgroup Administrators
+```
+
 ![Pasted%20image%2020260227084527.png](attachments/Pasted%20image%2020260227084527.png)
 
 ## Runas
@@ -80,18 +86,28 @@ Let's use  [RunasCS.exe](https://github.com/antonioCoco/RunasCs)
 In the documentation, they provide a *-b* or *--bypass-uac* to bypass UAC, convenient for our usage
 
 ```
-RunasCs.exe [username] [password] "mimikatz.exe privilege::debug sekurlsa::logonpasswords exit" -domain solution.local -b
+RunasCs.exe [username] [password] [command] -domain solution.local -b
 ```
 
 Performing a little test first to make sure we have the **SeDebugPrivilege**
 
+```
+RunasCs.exe [username] [password] "whoami /priv" -domain solution.local -b
+```
+
 ![Pasted%20image%2020260228040956.png](attachments/Pasted%20image%2020260228040956.png)
 
-Confirming we indeed ran mimikatz inside this RunasCs with the elevated permissions. 
+Let's run the command for mimikatz
 
-Once the command terminates our permission returns to normal
+```
+RunasCs.exe [username] [password] "mimikatz.exe privilege::debug sekurlsa::logonpasswords exit" -domain solution.local -b
+```
 
 ![Pasted%20image%2020260228040809.png](attachments/Pasted%20image%2020260228040809.png)
+
+Confirming we indeed ran mimikatz inside this RunasCs with the elevated permissions successfully
+
+Once the command terminates our permission returns to normal
 
 ## The answer is always UAC
 
@@ -109,7 +125,7 @@ This was the design and intent of the UAC
 
 Since the scenario was not being able to run mimikatz.exe, we need to ask ourselves which other security misconfiguration would allow us to elevate our permission via UAC
 
-Let's try the ever popular permission **SeImpersonatePrivilege**
+Let's try the popular permission **SeImpersonatePrivilege**
 
 Let's go back to the local security policy and remove **SeDebugPrivilege** from our user and add **SeImpersonlatePrivilege**
 
