@@ -272,17 +272,12 @@ I spent many days working on it. Looking through every machine, searching every 
 In the end it was simply because I did not pay attention to bloodhound!
 
 <details>
-<summary>Spoiler warning!</summary>
+	<summary>Spoiler warning!</summary>
 
-One of the users had "Do not require Kerberos preauthentication" checked. 
+	 <p>One of the users had "Do not require Kerberos preauthentication" checked. </p>
 
-Which of course means you can perform AS-REP Roasting!
+	 <p>Which of course means you can perform AS-REP Roasting!</p>
 
-Inside the users.json file for bloodhound it was 
-
-```
-"dontreqpreauth":true
-```
 </details>
 
 ## Summary
