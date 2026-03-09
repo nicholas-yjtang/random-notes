@@ -6,7 +6,7 @@ I thought I might want to reflect upon its meaning upon my life
 
 If you are just starting out on your OSCP, you might want to read this old person's ramblings
 
-And as usual, if you are impatient, you can just go straight to the [[#Summary]]
+And as usual, if you are impatient, you can just go straight to the [summary](#summary)
 
 ## Trip down memory lane
 
