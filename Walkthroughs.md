@@ -216,8 +216,8 @@ Thereafter, I started writing gentle reminders in my script to always start from
 flowchart TD
 	rely(Rely heavily on hints, walkthroughs, call for help)
 	peekmore(Need to peek often at hints, walkthroughs)
-	peeksome(Need to peek less often at walkthroughs or requiring hints)
-	peekless(Process finely tuned, only occasionally need to peek or get hints)
+	peeksome(Need to peek half the time at walkthroughs or requiring hints)
+	peekless(Process nearly finely tuned, only occasionally need to peek or get hints)
 	blind(Finely tuned process, need little to no help with most CTF)
 	rely --> peekmore
 	peekmore --> peeksome
