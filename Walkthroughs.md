@@ -4,7 +4,7 @@ Both a bane and boon to my life.
 
 I thought I might want to reflect upon its meaning upon my life
 
-If you are just starting out on your OSCP, you might want to read this old person's ramblings
+If you are just starting out on your OSCP journey, you might want to read this old person's ramblings
 
 And as usual, if you are impatient, you can just go straight to the [summary](#summary)
 
@@ -72,13 +72,15 @@ watch -n 1 'ps -ef | tail -n 20'
 
 Now if you ever actually used this for a CTF box, you know that, if a suspicious process ever pops up, you might see it pop up, but you would most likely be unable to catch the full path of the process on the first pass, or subsequent passes for that matter. 
 
+After all, old people have reflexes of a snail
+
 So you try fixing it with logging the output
 
 ```
 watch -n 1 'ps -ef | tail -n 20' | tee -a output.txt
 ```
 
-Which wasn't particularly satisfying since now its a mess of logs to wade through and I wasn't sure if there was anything to find in the first place
+Which wasn't particularly satisfying since now its a mess of logs to wade through and from the beginning you are not sure if there was anything to find
 
 Since it was not obvious to me at this point what other tools would be helpful for this situation, I wasn't able to progress for quite a while in this area and missed quite a few privesec, until I took a peek at a walkthrough and they used [pspy](https://github.com/DominicBreuker/pspy).
 
@@ -92,27 +94,27 @@ chmod a+x ./pspy64
 ./pspy64
 ```
 
-Now there is nothing wrong with the first method, since it may be possible that you can only use tools found on your target machine, but doing CTFs are already quite difficult for people new to the field. Why make it harder and more tedious when there are some useful tools you can fully utilize
+Now there is nothing wrong with the first method, since it may be possible that you can only use [tools](https://gtfobins.org/) found on your target machine, but doing CTFs are already quite difficult for people new to the field. Why make it harder and more tedious when there are some useful tools you can fully utilize
 
-This also kick-started other things processes, for example always having scripts ready to start up a file server (http/ftp/smb) for you to download files from.
+This also kick-started other processes, for example always having scripts ready to start up a file server (http/ftp/smb) for you to download files from.
 
 Honestly speaking, I would have never been able to find this on my own, considering this is my first foray into the pentesting world, and how unfamiliar I was, and there was so much information out there, it was practically a[ fog of war situation](https://en.wikipedia.org/wiki/Fog_of_war)
 
-It was only made much clearer when you have a specific objective, which in this case was to solve a specific CTF machine by looking for processes you can exploit
-
-### Speedrunning your CTF
+## Speedrunning your CTF
 
 I often see this in some of the [forums](https://www.reddit.com/r/oscp/) I visit
 
 *I completed all of Lainkusanagi's list of CTF machines from PGP and I still failed*
 
-One of the tempting things when you have access to walkthroughs, which btw I'm not immune to either, is to simply use it and complete the CTF machine like a checklist of things to do. 
+Not suggesting I know the exact cause of a fellow student's failure, but I find that walkthroughs are very addictive. Once you start using them, it's difficult to stop
+
+One of the tempting things when you have access to walkthroughs, which btw I'm not immune to either, is to simply use it and complete the CTF machine like a checklist of things to do.
 
 After all, didn't someone once mentioned that you only needed [10000 hours](https://en.wikipedia.org/wiki/Outliers_(book)) to become an expert?
 
-Due to time constraints (you would only have a few hours of time in a week), you would simply follow the walkthrough and call it a night after 4 hours. Only 9996 more hours to go! 
+Due to time constraints (perhaps you can only spare a few hours a week to dedicated studying), you would simply follow the walkthrough and call it a night after 4 hours. Only 9996 more hours to go! 
 
-And there would be some that would simply look at the walkthrough and decide, they already **know** it, and since the exam is open book, you can just rely on searching for it if it comes out. After all, how hard can it be?
+And there would be some, that would simply read the walkthrough and decide, they already **know** it, and since the exam is open book, you can just rely on searching for it if it comes out. After all, how hard can it be? No need to practice!
 
 This is where the try harder philosophy is vaguely trying to warn you about. When you rely on a crutch to walk, how can you possibly run or jump without it in the exam situation?
 
@@ -142,9 +144,9 @@ flowchart TD
 
 ```
 
-This is how I personally did it. 
+This is how I personally do it. 
 
-You should decide for yourself what your own study plan is. Perhaps you need more steps in between. 
+You should decide for yourself what your own study plan is. Perhaps you need more steps in between. Perhaps you need more than a walkthrough
 
 No matter how you do it, the most important part here is that you need to **review** after each and **every** CTF completed. 
 
@@ -171,7 +173,7 @@ Tried out my favorite injection command
 
 Not working?
 
-I took a long thorough look at the source code, and looked at the table schema. Oh there are a few columns missing
+I took a long thorough look at the source code, and looked at the table schema. Spent a few hours going through everything with a fine toothed comb. Oh there are a few columns missing
 
 Tried it again with the correct number of columns
 
@@ -182,11 +184,11 @@ Tried it again with the correct number of columns
 
 Looked through the source code again, trying hard to figure out what was the issue. Was my injection wrong?
 
-After another day, I finally took a look at the objectives. 
+After another day of pondering and trying and looking at the source code, I finally decided to take a look at the objectives. 
 
-Says, perform SQL injection. That's what I was doing!
+It says, perform SQL injection. Gee, that's what I was doing!
 
-Then looking at it again, it says perform SQL injection to **bypass authentication**
+Then taking a closer look at it again, it says perform SQL injection to **bypass authentication**
 
 Good grief. It was simply
 
@@ -194,9 +196,9 @@ Good grief. It was simply
 ' OR 1=1 -- //
 ```
 
-Post CTF, I took a closer look at the box to see what the issue was
+Post exploit, I took a look at the box to do a little post mortem analysis
 
-Checking the SQL server, i discovered that the secure_file_priv had a specific value
+Checking the running SQL server, i discovered that the secure_file_priv had a specific value
 
 ```
 show variables like 'secure_file_priv';
