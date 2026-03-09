@@ -58,7 +58,7 @@ Even though the[ try harder](https://www.offsec.com/blog/what-it-means-to-try-ha
 
 Frankly speaking, no matter how much you dig in, if you can't figure it out, you can't figure it out. No amount of time and resilience will resolve this. 
 
-Of course there is a caveat to this. This is only true when you are a beginner
+Of course there is a caveat to this. This is only true when you are still a beginner
 
 I'll give a few examples of my own experience
 
@@ -229,6 +229,14 @@ flowchart TD
 
 You would hear this quite often in [gyms](https://en.wikipedia.org/wiki/Progressive_overload). 
 
+In order to improve, you need to continually make it harder for yourself. Similarly you should find yourself relying less on hints and walkthroughs as you progress through your journey. 
+
+Of course how you want to structure this overload is up to you as the individual. 
+
+Perhaps you prefer to scale it in terms of difficulty, for example doing some CTF machines which are slightly out of scope, or ranked very hard. 
+
+If your focus is on the exam, I would suggest trying to reach a stage where you can do CTF boxes blind, regardless if it's an easy or intermediate level box. You want to have the confidence when you are in the exam situation
+
 In the beginning I had to take a lot of peeks at the walkthroughs and hints in order to proceed. 
 
 Don't be discouraged if you are here. Everyone starts somewhere. You don't become an expert overnight
@@ -239,7 +247,43 @@ Sometimes I take a few hours, sometimes I take a day or so. You decide and take 
 
 If you need to take longer to get to the final stage, then take the time to get there. There's no competition so everyone should take it at their own pace. 
 
-But the key is that you **must** deliberately take the challenge for the next stage. All skill development is the same way. You have to do the things you are uncomfortable at to get good at it
+But the key is that you **must** deliberately take the challenge for the next stage. All skill development is the same way. You have to do the things you are uncomfortable at to get good at it. 
+
+## Go in reverse
+
+There was a particular challenge lab that I was having trouble with. I was still pretty much a noob at this point, having just completed the modules and starting on the challenge labs
+
+I got through quite a few machines but the scope was large. I got stuck midway trying to find a way to the domain administrator
+
+Only a few walkthroughs were available out there, and i bumped into one that I immediately regret looking at. 
+
+It just suddenly popped up the NT hash for the domain administrator. 
+
+No explanations, nothing, and every subsequent machine's hash used this domain administrator hash to retrieve the flag...
+
+One of the reasons why I dislike looking at walkthroughs. Frankly it almost ruined the entire challenge lab
+
+I decided to make the best out of the situation. Since I was stuck, I wasn't sure what was the path forward, so I decided to reverse engineer and find the correct path. 
+
+Like solving a maze starting from the end
+
+I spent many days working on it. Looking through every machine, searching every directory for suspicious files, every environmental variable, every shared folder
+
+In the end it was simply because I did not pay attention to bloodhound!
+
+<details>
+<summary>Spoiler warning!</summary>
+
+One of the users had "Do not require Kerberos preauthentication" checked. 
+
+Which of course means you can perform AS-REP Roasting!
+
+Inside the users.json file for bloodhound it was 
+
+```
+"dontreqpreauth":true
+```
+</details>
 
 ## Summary
 
