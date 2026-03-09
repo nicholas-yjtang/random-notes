@@ -267,7 +267,13 @@ I decided to make the best out of the situation. Since I was stuck, I wasn't sur
 
 Like solving a maze starting from the end
 
-I spent many days working on it. Looking through every machine, searching every directory for suspicious files, every environmental variable, every shared folder
+I spent many days working on it. 
+
+Looking through every machine, searching every directory for suspicious files, every environmental variable, every shared folder
+
+I managed to find the next step forward, and completed all the flags necessary right up to the domain administrator
+
+Still I had to spend a lot of time trying to find the missing piece. How do I get from where I'm stuck to where I found the next step?
 
 In the end it was simply because I did not pay attention to bloodhound!
 
