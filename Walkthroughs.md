@@ -247,7 +247,7 @@ Sometimes I take a few hours, sometimes I take a day or so. You decide and take 
 
 If you need to take longer to get to the final stage, then take the time to get there. There's no competition so everyone should take it at their own pace. 
 
-But the key is that you **must** deliberately take the challenge for the next stage. All skill development is the same way. You have to do the things you are uncomfortable at to get good at it. 
+But the key is that you **must deliberately challenge** the next stage All skill development is the same way. You have to do the things you are uncomfortable at to get good at it. 
 
 ## Go in reverse
 
