@@ -259,7 +259,7 @@ Only a few walkthroughs were available out there, and i bumped into one that I i
 
 It just suddenly popped up the NT hash for the domain administrator. 
 
-No explanations, nothing, and every subsequent machine's hash used this domain administrator hash to retrieve the flag...
+No explanations, nothing, and every subsequent machine used this domain administrator's hash to retrieve the flag...
 
 One of the reasons why I dislike looking at walkthroughs. Frankly it almost ruined the entire challenge lab
 
