@@ -229,7 +229,7 @@ flowchart TD
 
 You would hear this quite often in [gyms](https://en.wikipedia.org/wiki/Progressive_overload). 
 
-In order to improve, you need to continually make it harder for yourself. Similarly you should find yourself relying less on hints and walkthroughs as you progress through your journey. 
+In order to improve, you need to continually make it harder for yourself. Similarly you should find yourself relying less on hints (specifically the CTF objectives) and walkthroughs as you progress through your journey. 
 
 Of course how you want to structure this overload is up to you as the individual. 
 
