@@ -288,8 +288,8 @@ In the end it was simply because I did not pay attention to bloodhound!
 
 ## Summary
 
-If you use walkthroughs, use them deliberately and purposefully. Peek to move forward when you are stuck, or use them to find alternative or improved methods
+If you use walkthroughs, use them **deliberately** and **purposefully**. Peek to move forward when you are stuck, or use them to find alternative or improved methods
 
-Review after every CTF and improve your process and methodology
+**Review** after every CTF and **improve your process** and methodology
 
-Progressively make your CTFs more challenging
+**Progressively overload** to make your CTFs more challenging
